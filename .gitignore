@@ -16,4 +16,4 @@ visualization/
 *.gltf
 
 #ignore all dataset
-data/
+/data/

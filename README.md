@@ -68,9 +68,9 @@ python main.py -c config/env.yaml scenarios/gb_main.yaml -- \
 
 ```bash
 python main.py -c config/env.yaml scenarios/gb_main.yaml -- \
-  run.job=sample run.name=001_gb_main sample.target=hdf5 \
+  run.job=sample run.name=001_gb_main sample.target=meshes \
   resume.checkpoint="./assets/gb_main.pth" \
-  dataloader.batch_size=512 sample.mode="sample_101" \
+  dataloader.batch_size=256 sample.mode="sample_101" \
   run.datasets=["behave"] sample.dataset=normal sample.repetitions=1 \
   model.cg_apply=True model.cg_scale=2.0
 ```
