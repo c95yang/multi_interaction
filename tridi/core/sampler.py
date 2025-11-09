@@ -159,6 +159,7 @@ class Sampler:
             sample_mode = self.sample_mode_to_str(self.cfg.sample.mode, self.cfg.sample.contacts_mode)
             samples_folder = self.base_samples_folder / f"{dataloader.dataset.name}" / f"{sample_mode}"
             samples_folder.mkdir(parents=True, exist_ok=True)
+            print(f"Created samples folder: {samples_folder}")
 
             for batch_i, batch in enumerate(dataloader):
                 for repetition_id in range(self.cfg.sample.repetitions):

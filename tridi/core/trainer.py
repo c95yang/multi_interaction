@@ -72,6 +72,7 @@ class Trainer:
     def get_outputs(self, batch):
         # get gt sbj vertices and joints
         with torch.no_grad():
+            print("Getting batch GT meshes and contacts: ", batch)
             gt_sbj_vertices, gt_sbj_joints = self.mesh_model.get_smpl_th(batch)
             batch.sbj_vertices = gt_sbj_vertices
             batch.sbj_joints = gt_sbj_joints

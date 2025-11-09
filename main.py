@@ -36,8 +36,6 @@ def main():
 
             trainer.train()
         elif cfg.run.job == 'sample':
-            # print FULL cfg with indentation for better readability
-
             sampler = Sampler(cfg, model)
             if cfg.sample.target == 'meshes':
                 sampler.sample()
