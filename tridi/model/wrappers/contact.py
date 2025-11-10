@@ -41,7 +41,7 @@ class ContactModel:
             # load partindexes for sampling captions
             smpl_template_idxs = np.load("./assets/smpl_template_decimated_idxs.npy")
             with open("./assets/smpl_segmentation.pkl", "rb") as fp:
-                partindex_per_vertex = pkl.load(fp)['vertex_to_partindex']
+                partindex_per_vertex = pkl.load(fp, encoding='bytes')['vertex_to_partindex']
             decimated_partindex_per_vertex = partindex_per_vertex[smpl_template_idxs]
             self.smpl_template_idxs_th = \
                 torch.tensor(smpl_template_idxs, dtype=torch.long, device=self.device)
